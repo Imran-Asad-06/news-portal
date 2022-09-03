@@ -38,7 +38,7 @@ const displayNews =newsData =>{
         <div class="col-md-10">
           <div class="card-body">
             <h5 class="card-title">${allNews.title}</h5>
-            <p class="card-text">${allNews.details}</p>
+            <p class="card-text">${allNews.details.slice(0, 600)+ "......."}</p>
             <p class="card-text"><small class="text-muted">${allNews.total_view}</small></p>
           </div>
         </div>
