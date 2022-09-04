@@ -39,8 +39,11 @@ const loadNews =id=>{
 const displayNews =newsData =>{
     
     const showNews = document.getElementById('show-news')
+    const newsCOunt = document.getElementById('news-count')
     showNews.textContent = ''
+    newsCOunt.textContent = ''
     for(const allNews of newsData.data){
+    newsCOunt.innerText = newsData.data.length + "items found for catagory"
     const newsDiv = document.createElement('div')
       newsDiv.classList.add('news-item')
       newsDiv.innerHTML = `
