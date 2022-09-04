@@ -85,4 +85,5 @@ const modalDetails = detailsdata =>{
     <p> Rating : ${detailsdata.data[0].rating.number? detailsdata.data[0].rating.number:'No Data Found'} </P>
   `
 }
+
 loadContainer()
