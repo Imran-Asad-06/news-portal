@@ -2,6 +2,11 @@ const loadContainer = () =>{
     fetch('https://openapi.programming-hero.com/api/news/categories')
     .then(res => res.json())
     .then(data => disPlayContainer(data))
+    .catch((error) => {
+      console.log(error)
+    });
+  
+
 }
 
 const disPlayContainer = data => {
@@ -23,6 +28,11 @@ const loadNews =id=>{
     fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
     .then(res => res.json())
     .then(newsData => displayNews(newsData))
+    .catch((error) => {
+      console.log(error)
+    });
+  
+
     
 }
 
@@ -59,6 +69,9 @@ const displayNews =newsData =>{
 }
  toggleSpinner(false);
 }
+
+
+
 // Spinner
 const toggleSpinner = isLoading => {
   const loaderSection = document.getElementById('loader');
@@ -74,6 +87,11 @@ const showDetails = newsId => {
   fetch(`https://openapi.programming-hero.com/api/news/${newsId}`)
   .then(res => res.json())
   .then(detailsdata => modalDetails(detailsdata)  )
+  .catch((error) => {
+    console.log(error)
+  });
+
+
 }
 const modalDetails = detailsdata =>{
   //console.log(detailsdata.data[0].author.name)
