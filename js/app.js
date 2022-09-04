@@ -19,6 +19,7 @@ const disPlayContainer = data => {
 }
 
 const loadNews =id=>{
+  toggleSpinner(true);
     fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
     .then(res => res.json())
     .then(newsData => displayNews(newsData))
