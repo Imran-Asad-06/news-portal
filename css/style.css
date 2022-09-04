@@ -2,3 +2,16 @@
     height: 40px;
     width: 40px;
 }
+@media screen and (max-width: 576px) {
+    body {
+        margin: 2%;
+        padding: 2%;
+    }
+
+    #nav-container{
+        display: flex;
+        flex-wrap: wrap;
+        
+
+    }
+}
